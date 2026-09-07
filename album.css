@@ -1,0 +1,155 @@
+:root{
+  --bg:#fefdfb;
+  --ink:#1f1b2e;
+  --soft:#6f6a80;
+  --primary:#5b4fe8;
+  --green:#2fae6b;
+  --yellow:#f7b733;
+  --pink:#f0607a;
+  --purple-bg:#e9e3fd;
+  --yellow-bg:#fdecc0;
+  --green-bg:#d9f3e2;
+  --pink-bg:#fbdde3;
+  --line:#ece9f6;
+  --radius:28px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  min-height:100vh;background:var(--bg);color:var(--ink);
+  font-family:Inter,sans-serif;overflow-x:hidden;
+}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{text-decoration:none;color:inherit}
+.page-glow{position:fixed;border-radius:50%;filter:blur(90px);opacity:.24;pointer-events:none;z-index:-1}
+.glow-one{width:320px;height:320px;background:var(--yellow);top:180px;left:-130px}
+.glow-two{width:420px;height:420px;background:var(--primary);top:480px;right:-220px}
+.glow-three{width:260px;height:260px;background:var(--green);bottom:60px;left:25%}
+
+.album-header{
+  max-width:1320px;margin:auto;padding:30px 42px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.brand{font-family:"Plus Jakarta Sans",sans-serif;font-weight:800;font-size:20px;letter-spacing:-.03em;display:flex;align-items:center;gap:8px}
+.brand-star{color:var(--yellow);font-size:24px}
+.header-right{display:flex;align-items:center;gap:24px}
+.lang-switch{display:flex;gap:4px;background:#f3f1f8;padding:4px;border-radius:999px}
+.lang-switch button{border:0;background:transparent;color:var(--soft);font:700 11px Inter,sans-serif;padding:8px 9px;border-radius:999px;cursor:pointer;transition:.2s}
+.lang-switch button.active{background:#fff;color:var(--primary);box-shadow:0 3px 10px rgba(31,27,46,.10)}
+.album-nav{display:flex;gap:28px}
+.album-nav a{font-size:14px;font-weight:600;color:var(--soft);transition:.2s}
+.album-nav a:hover{color:var(--primary)}
+
+main{max-width:1320px;margin:auto;padding:0 42px 60px}
+.hero{
+  min-height:590px;display:grid;grid-template-columns:1.02fr .98fr;
+  align-items:center;gap:60px;padding:50px 0 90px;
+}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:.13em;color:var(--primary)}
+.hero h1,.section-head h2,.bottom-cta h2{
+  font-family:"Plus Jakarta Sans",sans-serif;font-weight:800;letter-spacing:-.055em;line-height:.98;
+}
+.hero h1{font-size:clamp(52px,6.4vw,88px);margin:18px 0 24px}
+.hero h1 span,.section-head h2 span,.bottom-cta h2 span{color:var(--primary)}
+.hero p{max-width:480px;color:var(--soft);font-size:17px;line-height:1.7}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.btn{
+  border-radius:100px;padding:15px 24px;font-size:14px;font-weight:700;
+  display:inline-flex;align-items:center;gap:10px;transition:transform .2s ease,box-shadow .2s ease;
+}
+.btn:hover{transform:translateY(-3px)}
+.btn-primary{background:var(--primary);color:#fff;box-shadow:0 18px 30px -16px rgba(91,79,232,.65)}
+.btn-light{background:#fff;border:1px solid var(--line)}
+.btn-dark{background:var(--ink);color:#fff}
+
+.hero-collage{height:500px;position:relative}
+.hero-card{position:absolute;border-radius:24px;overflow:hidden;box-shadow:0 28px 50px -25px rgba(31,27,46,.35);border:8px solid #fff}
+.card-a{width:54%;height:68%;left:2%;top:12%;transform:rotate(-5deg)}
+.card-b{width:42%;height:48%;right:2%;top:0;transform:rotate(6deg)}
+.card-c{width:43%;height:43%;right:8%;bottom:0;transform:rotate(-2deg)}
+.hero-sticker{
+  position:absolute;padding:10px 16px;border-radius:100px;font-size:12px;font-weight:800;
+  box-shadow:0 10px 30px -16px rgba(0,0,0,.35)
+}
+.sticker-one{background:var(--yellow);left:0;bottom:3%;transform:rotate(-7deg)}
+.sticker-two{background:var(--green);color:#fff;right:0;top:48%;transform:rotate(8deg)}
+
+.intro-strip{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:20px 0;display:flex;justify-content:space-between;gap:20px;
+  font-family:"Plus Jakarta Sans",sans-serif;font-weight:700;font-size:14px;
+}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:8px}
+.purple{background:var(--primary)}.yellow{background:var(--yellow)}.green{background:var(--green)}
+
+.albums-section{padding:120px 0 80px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:48px}
+.section-head h2{font-size:clamp(42px,5vw,68px);margin-top:14px}
+.section-head p{max-width:380px;color:var(--soft);line-height:1.7}
+
+.albums-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;
+  gap:28px;align-items:start;
+}
+.album-card{
+  position:relative;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius);padding:12px;overflow:hidden;
+  box-shadow:0 20px 50px -42px rgba(31,27,46,.45);
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.album-card:hover{transform:translateY(-7px);box-shadow:0 30px 70px -38px rgba(31,27,46,.38)}
+.album-card-large{grid-row:span 2}
+.album-image{overflow:hidden;border-radius:20px;height:290px}
+.album-card-large .album-image{height:570px}
+.album-card-tall .album-image{height:390px}
+.album-image img{transition:transform .5s ease}
+.album-card:hover .album-image img{transform:scale(1.05)}
+.album-info{padding:22px 10px 12px}
+.album-date{font-size:10px;font-weight:800;letter-spacing:.12em;color:var(--soft)}
+.album-info h3{font-family:"Plus Jakarta Sans",sans-serif;font-size:28px;letter-spacing:-.035em;margin:8px 0 16px}
+.album-card-large h3{font-size:36px}
+.album-meta{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:700;color:var(--primary)}
+.round-arrow{
+  width:36px;height:36px;border-radius:50%;background:var(--purple-bg);
+  display:grid;place-items:center;font-size:17px
+}
+.album-color{position:absolute;width:65px;height:65px;border-radius:50%;right:-18px;top:-18px;opacity:.95}
+.color-purple{background:var(--primary)}.color-yellow{background:var(--yellow)}.color-green{background:var(--green)}
+
+.bottom-cta{
+  margin-top:80px;background:var(--yellow-bg);border-radius:34px;
+  padding:62px;display:flex;align-items:end;justify-content:space-between;
+  position:relative;overflow:hidden;
+}
+.bottom-cta h2{font-size:clamp(40px,5vw,66px);margin-top:12px}
+.cta-doodle{position:absolute;right:36px;top:22px;font-size:30px;letter-spacing:12px;color:var(--primary);opacity:.7}
+
+.album-footer{
+  max-width:1320px;margin:auto;padding:28px 42px 42px;
+  border-top:1px solid var(--line);display:flex;justify-content:space-between;
+  color:var(--soft);font-size:12px;
+}
+
+@media(max-width:900px){
+  .header-right{gap:14px}
+
+  .album-header,main{padding-left:24px;padding-right:24px}
+  .hero{grid-template-columns:1fr;gap:30px;padding-top:35px}
+  .hero-collage{height:430px;max-width:650px;width:100%}
+  .section-head{display:block}.section-head p{margin-top:22px}
+  .albums-grid{grid-template-columns:1fr}
+  .album-card-large .album-image{height:430px}
+  .bottom-cta{padding:42px;display:block}.bottom-cta .btn{margin-top:30px}
+}
+@media(max-width:560px){
+  .header-right{gap:8px}.album-nav{display:none}.lang-switch button{padding:7px 8px}
+
+  .album-header{padding:22px 18px}.album-nav{gap:16px}.album-nav a{font-size:12px}
+  main{padding:0 18px 40px}.hero{padding:35px 0 65px}.hero h1{font-size:51px}
+  .hero-collage{height:360px}.card-a{height:63%;width:58%}.card-b{width:48%;height:45%}.card-c{width:45%;height:40%}
+  .intro-strip{display:grid;grid-template-columns:1fr 1fr;font-size:12px}
+  .albums-section{padding:80px 0 30px}.album-card-large .album-image,.album-card-tall .album-image,.album-image{height:330px}
+  .album-info h3,.album-card-large h3{font-size:27px}
+  .bottom-cta{padding:32px 24px;border-radius:26px}.cta-doodle{display:none}
+  .album-footer{padding:24px 18px 34px}
+}

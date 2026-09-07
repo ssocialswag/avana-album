@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVANA — Фотоальбом</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="album.css">
+</head>
+<body>
+  <div class="page-glow glow-one"></div>
+  <div class="page-glow glow-two"></div>
+  <div class="page-glow glow-three"></div>
+
+  <header class="album-header">
+    <a class="brand" href="https://awana.ch/"><span class="brand-star">✦</span><span>AVANA</span></a>
+    <div class="header-right">
+      <nav class="album-nav">
+        <a href="https://awana.ch/" data-i18n="home">На главную</a>
+        <a href="#albums" data-i18n="albums_nav">Альбомы</a>
+      </nav>
+      <div class="lang-switch" id="langSwitch"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow" data-i18n="eyebrow">НАШИ МОМЕНТЫ ✦</span>
+        <h1><span data-i18n="hero_1">Люди.</span> <span class="accent" data-i18n="hero_2">Жизнь.</span><br><span data-i18n="hero_3">Настоящие моменты.</span></h1>
+        <p data-i18n="hero_text">Фотографии встреч, общения и всего того, что делает AVANA нашей семьёй.</p>
+        <div class="hero-actions">
+          <a href="#albums" class="btn btn-primary"><span data-i18n="view_albums">Смотреть альбомы</span> <span>↓</span></a>
+          <a href="https://awana.ch/" class="btn btn-light"><span>←</span> <span data-i18n="back_site">Вернуться на сайт</span></a>
+        </div>
+      </div>
+
+      <div class="hero-collage" aria-hidden="true">
+        <div class="hero-card card-a"><img src="Awana.png" alt=""></div>
+        <div class="hero-card card-b"><img src="awana2.png" alt=""></div>
+        <div class="hero-card card-c"><img src="awana3.png" alt=""></div>
+        <div class="hero-sticker sticker-one">♡ together</div>
+        <div class="hero-sticker sticker-two">AVANA ✦</div>
+      </div>
+    </section>
+
+    <section class="intro-strip">
+      <div><span class="dot purple"></span><span data-i18n="strip_1">Встречаемся</span></div>
+      <div><span class="dot yellow"></span><span data-i18n="strip_2">Общаемся</span></div>
+      <div><span class="dot green"></span><span data-i18n="strip_3">Создаём воспоминания</span></div>
+    </section>
+
+    <section class="albums-section" id="albums">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow" data-i18n="albums_eyebrow">ФОТОАЛЬБОМЫ</span>
+          <h2><span data-i18n="choose_1">Выбери</span><br><span class="accent" data-i18n="choose_2">воспоминание.</span></h2>
+        </div>
+        <p data-i18n="albums_text">Каждая встреча — это отдельная история. Нажми на альбом, чтобы открыть фотографии.</p>
+      </div>
+
+      <div class="albums-grid">
+        <a class="album-card album-card-large" href="album-autumn.html" data-album="autumn">
+          <div class="album-image"><img src="awana2.png" alt="AVANA — Осенняя встреча"></div>
+          <div class="album-info">
+            <span class="album-date" data-i18n="date_2">ОСЕНЬ 2026</span>
+            <h3 data-i18n="album_2">Осенняя встреча</h3>
+            <div class="album-meta"><span data-i18n="open_photos">Смотреть фотографии</span><span class="round-arrow">↗</span></div>
+          </div><span class="album-color color-yellow"></span>
+        </a>
+
+        <a class="album-card" href="album-winter.html" data-album="winter">
+          <div class="album-image"><img src="awana3.png" alt="AVANA — Зимняя встреча"></div>
+          <div class="album-info">
+            <span class="album-date" data-i18n="date_3">ЗИМА 2026</span>
+            <h3 data-i18n="album_3">Зимняя встреча</h3>
+            <div class="album-meta"><span data-i18n="open_photos">Смотреть фотографии</span><span class="round-arrow">↗</span></div>
+          </div><span class="album-color color-green"></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="bottom-cta">
+      <div>
+        <span class="eyebrow" data-i18n="cta_eyebrow">ХОЧЕШЬ СТАТЬ ЧАСТЬЮ?</span>
+        <h2><span data-i18n="cta_1">Следующие</span><br><span data-i18n="cta_2">моменты — </span><span class="accent" data-i18n="cta_3">вместе.</span></h2>
+      </div>
+      <a class="btn btn-dark" href="https://awana.ch/"><span data-i18n="cta_button">Перейти на AVANA</span> →</a>
+      <div class="cta-doodle">✦ ♡ ☺</div>
+    </section>
+  </main>
+
+  <footer class="album-footer">
+    <span>© 2026 AVANA</span>
+    <span data-i18n="footer">Фотоальбом AVANA ♡</span>
+  </footer>
+
+  <script src="album.js"></script>
+</body>
+</html>
