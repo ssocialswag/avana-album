@@ -19,7 +19,7 @@ body{
   min-height:100vh;background:var(--bg);color:var(--ink);
   font-family:Inter,sans-serif;overflow-x:hidden;
 }
-img{display:block;width:100%;height:100%;object-fit:cover}
+img{display:block;width:100%;height:100%;object-fit:contain}
 a{text-decoration:none;color:inherit}
 .page-glow{position:fixed;border-radius:50%;filter:blur(90px);opacity:.24;pointer-events:none;z-index:-1}
 .glow-one{width:320px;height:320px;background:var(--yellow);top:180px;left:-130px}
