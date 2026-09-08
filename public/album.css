@@ -32,6 +32,7 @@ a{text-decoration:none;color:inherit}
 }
 .brand{font-family:"Plus Jakarta Sans",sans-serif;font-weight:800;font-size:20px;letter-spacing:-.03em;display:flex;align-items:center;gap:8px}
 .brand-star{color:var(--yellow);font-size:24px}
+.brand-logo{height:38px;width:auto;display:block}
 .header-right{display:flex;align-items:center;gap:24px}
 .lang-switch{display:flex;gap:4px;background:#f3f1f8;padding:4px;border-radius:999px}
 .lang-switch button{border:0;background:transparent;color:var(--soft);font:700 11px Inter,sans-serif;padding:8px 9px;border-radius:999px;cursor:pointer;transition:.2s}
